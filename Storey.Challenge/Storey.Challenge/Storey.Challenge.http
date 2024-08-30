@@ -1,6 +1,0 @@
-@Storey.Challenge_HostAddress = http://localhost:5084
-
-GET {{Storey.Challenge_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
