@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace Storey.DAL.Models
 {
@@ -12,7 +8,10 @@ namespace Storey.DAL.Models
 	{
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		[JsonIgnore]
 		public int CategoriaId { get; set; }
+		
+		[JsonPropertyName("Categoria")]
 		public string Nombre { get; set; }
 		public virtual ICollection<CategoriaItem> Items { get; set; }
 	}
